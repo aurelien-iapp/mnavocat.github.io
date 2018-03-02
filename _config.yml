@@ -24,6 +24,16 @@ home_slider:
   texts:
   - Skieurs et Snowboarders
   - Faites valoir vos droits à l'indemnisation en cas d'accident
+- slide: Accidents de la circulation
+  unsplash_id: nHAGNt2rFz8
+  texts:
+  - Vous avez été renversé sur la voie publique
+  - Contactez le cabinet pour vous assister dans vos démarches
+- slide: Accidents de vélo
+  unsplash_id: RMlGmGSdFpY
+  texts:
+  - Vous avez eu un accident à vélo
+  - Avez ou sans tiers identifié, nous pouvons vous aider à être indemnisé
 
 # Build settings
 markdown: kramdown
