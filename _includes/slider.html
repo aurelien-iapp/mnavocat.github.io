@@ -1,21 +1,23 @@
 <!-- Home Gallery -->
 <amp-carousel width="1000" height="500" layout="responsive" autoplay delay="3000" type="slides">
+    {% for slide in site.home_slider %}
     <div class="Slide">
         <amp-img
-            <amp-img
-                src="https://source.unsplash.com/ySQF5oENkrw/800x400"
-                srcset="https://source.unsplash.com/ySQF5oENkrw/400x200 400w, https://source.unsplash.com/ySQF5oENkrw/800x400 800w, https://source.unsplash.com/ySQF5oENkrw/1600x800 1600w, https://source.unsplash.com/ySQF5oENkrw/3200x1600 3200w"
+
+                src="https://source.unsplash.com/{{ slide.unsplash_id }}/800x400"
+                srcset="https://source.unsplash.com/{{ slide.unsplash_id }}/400x200 400w, https://source.unsplash.com/{{ slide.unsplash_id }}/800x400 800w, https://source.unsplash.com/{{ slide.unsplash_id }}/1600x800 1600w, https://source.unsplash.com/{{ slide.unsplash_id }}/3200x1600 3200w"
                 width="800"
-                height="400"
                 layout="responsive"
-                heights="(min-width:1000px) 30%, 50%"
-                alt="Accidents de ski">
+                heights="(min-width:1280px) 40%, 50%"
+                alt="{{ slide.name }}">
         </amp-img>
         <div class="Slide-overlay">
-            <p><span class="text">Skieurs et Snowboarders</span></p>
-            <p><span class="text">Faites valoir vos droits à l'indemnisation en cas d'accident</span></p>
+            {% for text in slide.texts %}
+            <p><span class="text">{{ text }}</span></p>
+            {% endfor %}
         </div>
     </div>
+    {% endfor %}
     <div class="Slide">
         <amp-img
                 src="assets/slide2-1000x500.jpg"
